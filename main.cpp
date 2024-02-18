@@ -78,7 +78,17 @@ int getCharArrayLength(){
     return 0;
 }
 
+[[maybe_unused]]
+int charArrayWithSpaces(){
+    char tt[15];
+    cout << "Tapez une chaine de caractères avec espace" << endl;
+    cin.getline(tt,15);
+    cout << "Vous avez tapé " << tt;
+
+    return 0;
+}
+
 int main() {
-    getCharArrayLength();
+    charArrayWithSpaces();
     return 0;
 }
