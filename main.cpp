@@ -3,7 +3,7 @@
 
 using namespace std;
 
-
+[[maybe_unused]]
 int firstCharArray(){
     char tt[20];
     tt[0] = 'B';
@@ -17,7 +17,7 @@ int firstCharArray(){
     cout << tt;
     return 0;
 }
-
+[[maybe_unused]]
 int usingCinWithCharArray(){
     char tt[20];
     cout << "tapez une chaine de caractère";
