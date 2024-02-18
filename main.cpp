@@ -88,7 +88,23 @@ int charArrayWithSpaces(){
     return 0;
 }
 
+[[maybe_unused]]
+int exercise1(){
+
+    char tt[10];
+    char tmp;
+    cout << "Donnez une chaine de caractères" << endl;
+    cin >> tt;
+    for (int i = 0; i < strlen(tt); i++) {
+        tmp = toupper(tt[i]);
+        tt[i] = tmp;
+    }
+
+    cout << "Votre chaine de caractère en majuscule est : " << tt;
+    return 0;
+}
+
 int main() {
-    charArrayWithSpaces();
+    exercise1();
     return 0;
 }
