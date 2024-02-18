@@ -27,6 +27,7 @@ int usingCinWithCharArray(){
     return 0;
 }
 
+[[maybe_unused]]
 int compareTwoCharArray(){
     char tt[20];
     cout << "Tapez une chaine de caractère";
@@ -40,7 +41,22 @@ int compareTwoCharArray(){
     return 0;
 }
 
+[[maybe_unused]]
+int getLexicographicOrder(){
+    char a[20];
+    cout << "Tapez une chaine de caractère a tester";
+    cin >> a;
+    if (strcmp(a,"bonjour")==0){
+        cout << "La chaine est identique";
+    }else if (strcmp(a,"bonjour")>0){
+        cout << "La chaine " << a << " est après bonjour";
+    }else{
+        cout << "La chaine " << a << " est avant bonjour";
+    }
+    return 0;
+}
+
 int main() {
-    compareTwoCharArray();
+    getLexicographicOrder();
     return 0;
 }
