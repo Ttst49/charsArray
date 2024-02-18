@@ -120,7 +120,37 @@ int exercise2 (){
     return 0;
 }
 
+[[maybe_unused]]
+int exercise3(){
+    char verbeInfinitif[255];
+    cout << "Donnez un verbe du premier groupe à l'infinitif" << endl;
+    cin >> verbeInfinitif;
+    int longueur = strlen(verbeInfinitif);
+    if (longueur >=2){
+        if (verbeInfinitif[longueur-1] !='e' && verbeInfinitif[longueur-2] !='r'){
+            verbeInfinitif[longueur-2] = '\0';
+            cout << "Je " << verbeInfinitif << "e" <<endl;
+            cout << "Tu " << verbeInfinitif << "es"<<endl;
+            cout << "Il " << verbeInfinitif << "e"<<endl;
+            if (verbeInfinitif[longueur-3]=='g'){
+                cout << "Nous " << verbeInfinitif << "eons"<<endl;
+            }else{
+                cout << "Nous " << verbeInfinitif << "ons"<<endl;
+            }
+            cout << "Vous " << verbeInfinitif << "ez"<<endl;
+            cout << "Ils " << verbeInfinitif << "ent"<<endl;
+        } else{
+            cout << "Ce n'est pas un verbe du premier groupe";
+        }
+
+    } else{
+        cout << "Vous n'avez pas donné une chaine de caractère valide";
+    }
+    return 0;
+}
+
+
 int main() {
-    exercise2();
+    exercise3();
     return 0;
 }
