@@ -56,7 +56,19 @@ int getLexicographicOrder(){
     return 0;
 }
 
+[[maybe_unused]]
+int copyStringToAnother(){
+    char a[20], b[20], c[20];
+    cout << "Donnez la valeur qui sera associée par la suite dans le code" << endl;
+    cin >> b;
+    strcpy(a,b);
+    strcpy(c,a);
+    cout << "La chaine c vaut: " << c;
+
+    return 0;
+}
+
 int main() {
-    getLexicographicOrder();
+    copyStringToAnother();
     return 0;
 }
