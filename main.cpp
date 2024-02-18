@@ -17,7 +17,17 @@ int firstCharArray(){
     return 0;
 }
 
+int usingCinWithCharArray(){
+    char tt[20];
+    cout << "tapez une chaine de caractère";
+    cin >> tt;
+    cout << "Vous avez saisi: " << tt;
+
+
+    return 0;
+}
+
 int main() {
-    firstCharArray();
+    usingCinWithCharArray();
     return 0;
 }
