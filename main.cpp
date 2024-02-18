@@ -68,7 +68,17 @@ int copyStringToAnother(){
     return 0;
 }
 
+[[maybe_unused]]
+int getCharArrayLength(){
+    char a[20];
+    int aLength;
+    cout << "Donnez une chaine de caractère" << endl; cin >> a;
+    aLength = strlen(a);
+    cout << "La taille de la chaine est: " << aLength;
+    return 0;
+}
+
 int main() {
-    copyStringToAnother();
+    getCharArrayLength();
     return 0;
 }
