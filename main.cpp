@@ -92,19 +92,35 @@ int charArrayWithSpaces(){
 int exercise1(){
 
     char tt[10];
-    char tmp;
     cout << "Donnez une chaine de caractères" << endl;
     cin >> tt;
     for (int i = 0; i < strlen(tt); i++) {
-        tmp = toupper(tt[i]);
-        tt[i] = tmp;
+        tt[i] = toupper(tt[i]);
     }
 
     cout << "Votre chaine de caractère en majuscule est : " << tt;
     return 0;
 }
 
+[[maybe_unused]]
+int exercise2 (){
+
+    char a[255];
+    cout << "Donnez une chaine de caractères" << endl;
+    cin.getline(a,20);
+    char voyelles[] = "aeiouy";
+    for (int i = 0; i < strlen(a); i++) {
+        for (int j = 0; j < strlen(voyelles); j++) {
+            if(a[i]==voyelles[j] | a[i]== toupper(voyelles[j])){
+                a[i] = '.';
+            }
+        }
+    }
+    cout << "La chaine sans voyelles est " << a;
+    return 0;
+}
+
 int main() {
-    exercise1();
+    exercise2();
     return 0;
 }
