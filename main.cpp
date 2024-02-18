@@ -1,4 +1,5 @@
 #include <iostream>
+#include "cstring"
 
 using namespace std;
 
@@ -23,11 +24,23 @@ int usingCinWithCharArray(){
     cin >> tt;
     cout << "Vous avez saisi: " << tt;
 
+    return 0;
+}
+
+int compareTwoCharArray(){
+    char tt[20];
+    cout << "Tapez une chaine de caractère";
+    cin >> tt;
+    if (strcmp(tt,"bonjour") == 0){
+        cout << "Gagné";
+    } else{
+        cout << strcmp("bonjour",tt) << endl <<"Perdu";
+    }
 
     return 0;
 }
 
 int main() {
-    usingCinWithCharArray();
+    compareTwoCharArray();
     return 0;
 }
